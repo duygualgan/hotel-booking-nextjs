@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Navbar from "./_components/Navbar";
+import Footer from "./_components/Footer";
 // import Navbar from "./_components/Navbar";
 // import Footer from "./_components/Footer";
 // import { Hotel } from "@/types/types";
@@ -35,7 +36,7 @@ const RouterLayout = ({ children }: RouterLayoutProps) => {
     <>
       <Navbar />
       <div className="min-h-screen">{children}</div>
-      Footer
+      <Footer />
     </>
   );
 };

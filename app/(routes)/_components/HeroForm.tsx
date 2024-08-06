@@ -223,7 +223,7 @@ const HeroForm = () => {
                 )}
               />
               <Button
-                variant="default"
+                variant="mybutton"
                 type="submit"
                 className=" col-span-1 md:col-span-4"
               >
