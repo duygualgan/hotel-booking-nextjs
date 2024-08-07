@@ -9,6 +9,7 @@ export interface Slider {
 }
 
 export interface Hotel {
+    length: number;
     collectionId: string;
     collectionName: string;
     contact_email: string;

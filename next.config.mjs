@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ["bookin.pockethost.io"],
+  },
+};
 
 export default nextConfig;

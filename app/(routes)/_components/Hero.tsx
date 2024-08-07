@@ -10,13 +10,14 @@ import {
 } from "@/components/ui/carousel";
 
 import Autoplay from "embla-carousel-autoplay";
-import { SliderImage, apiImagesUrl } from "@/constans";
+import { apiImagesUrl } from "@/constans";
 import Image from "next/image";
+
+import HeroForm from "./HeroForm";
 import { getSlider } from "@/actions/getSlider";
 import { Skeleton } from "@/components/ui/skeleton";
-import ImagesWaves from "@/components/ImagesWaves";
-import HeroForm from "./HeroForm";
 import { Slider } from "@/types/types";
+import ImagesWaves from "@/components/ImagesWaves";
 
 const Hero = () => {
   const [sliderImages, setSliderImages] = useState<Slider[]>([]);

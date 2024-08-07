@@ -7,7 +7,25 @@ import { PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-const Footer = () => {
+interface FooterProps {
+  data: Hotel;
+  loading: boolean;
+}
+
+const Footer = ({ data, loading }: FooterProps) => {
+  if (loading || (!loading && (!data || data.length === 0))) {
+    return (
+      <div className="relative text-white">
+        <div className="z-30 absolute inset-0">
+          <ImagesWaves myclassName="absolute -top-5 transform rotate-180" />
+        </div>
+        <div className="z-20 relative h-96">
+          <Skeleton className="h-full w-full bg-slate-600 " />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative text-white">
       <div className="z-10 absolute inset-0">
@@ -45,7 +63,9 @@ const Footer = () => {
                   className="w-full"
                 />
               </div>
-              <p className="text-gray-400 mt-2"></p>
+              <p className="text-gray-400 mt-2">
+                {data.summary.replace(/<\/?[^>]+(>|$)/g, "")}
+              </p>
             </div>
 
             {/** Col Span 2 */}
@@ -89,17 +109,17 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Contact</h3>
               <p className="text-gray-400 space-y-2">
-                <span className="block"> sssssssss</span>
-                <span className="block">ssssssssssss</span>
-                <span className="block"> ssssssssssss</span>
+                <span className="block"> {data.location}</span>
+                <span className="block">{data.contact_phone}</span>
+                <span className="block"> {data.contact_email}</span>
               </p>
             </div>
           </div>
           <div className="text-center mt-8">
-            <p className="text-gray-400">© Youtube Efe Görkem Ümit</p>
+            <p className="text-gray-400">© fffffffff fffffffff ffffff fff</p>
             <p className="text-gray-400">
               Designed By{" "}
-              <span className="text-yellow-500">Efe Görkem Ümit</span>
+              <span className="text-yellow-500">ddddddd ddddd d dd</span>
             </p>
           </div>
         </div>
