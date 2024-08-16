@@ -21,7 +21,7 @@ export  const getRooms= async()=> {
     try {
 
         const resultList = await pb.collection('rooms').getList(1, 50, {
-            filter: 'created >= "2022-01-01 00:00:00" ',
+            filter: 'created >= "2022-01-01 00:00:00"',
         });
         return resultList.items;
         
